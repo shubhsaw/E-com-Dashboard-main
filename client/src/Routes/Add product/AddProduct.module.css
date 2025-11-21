@@ -1,0 +1,97 @@
+#addproduct{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(222, 224, 224);
+}
+
+#form_plate{
+    height: 75%;
+    width: 50%;
+    /* background-color: grey; */
+     background-color:  rgb(255, 252, 252);
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+.addproduct_form{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 90%;
+    
+
+}
+.label{
+    font-size: 15px;
+    height: 20px;
+    width: 200px;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    margin-left: 10px;
+    letter-spacing: 1px;
+    font-style: initial;
+    color: rgb(43, 120, 226);
+    background-color: rgb(255, 252, 252);
+}
+.inputbox{
+
+    padding-left: 10px;
+    /* width: 500px; */
+    height: 30px;
+    border-radius: 4px;
+    /* color: rgb(158, 157, 157); */
+    font-size: 15px;
+}
+.inputbox:last-child{
+    margin-top: 20px;
+      /* margin-top: 10px; */
+    background-color: rgb(86, 86, 210);
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-style: bold;
+     text-shadow: 1px 1px 5px   rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.heading{
+    width: 90%;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    color:  rgb(86, 86, 210);
+    text-shadow: 1px 1px 5px   rgb(110, 110, 182);
+    
+     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+
+}
+
+.backbtn{
+    font-size: large;
+    
+    cursor: pointer;
+   /* flex-basis: 100px; */
+    color: rgb(100, 100, 203);
+    
+    background-color: transparent;
+    border: none;
+    /* for aligning text and icon */
+    display: flex;
+    align-items: center;
+}
+.backbtn:hover{
+    border-radius: 20px;
+    color: rgb(0, 71, 170);
+    background-color: rgb(222, 224, 224);
+    /* text-decoration: underline; */
+}
+.title{
+    flex: 1;              /* expands to take space */
+  text-align: center;   /* centers text in that space */
+  margin: 0;
+}

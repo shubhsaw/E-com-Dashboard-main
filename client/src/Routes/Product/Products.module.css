@@ -1,0 +1,141 @@
+/* Outer container */
+#product {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background: #f9f9ff;
+  min-height: 100vh;
+}
+
+/* Product list box */
+#productList {
+  width: 100%;
+  max-width: 1000px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Heading row */
+.heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.backbtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 16px;
+  padding: 6px 12px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: #5656d2;
+  font-weight: 500;
+  transition: 0.2s ease-in-out;
+}
+
+.backbtn:hover {
+  color: #2e2eb0;
+  transform: scale(1.05);
+}
+
+.title {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Table styling */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.05);
+}
+
+.table th {
+  background: #5656d2;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px;
+  text-align: left;
+}
+
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  color: #444;
+}
+
+.table tr:nth-child(even) {
+  background: #f5f5fc;
+}
+
+.table tr:hover {
+  background: #ececff;
+  transition: background 0.2s ease-in-out;
+}
+
+/* Empty state */
+.noProducts {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: #777;
+  margin-top: 20px;
+}
+#delbtn{
+  background-color: rgb(246, 78, 78);
+  border-radius: 4px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: larger;
+}
+#editbtn{
+  background-color: rgb(78, 153, 246);
+  border-radius: 4px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: larger;
+  margin-right: 8px;
+}
+
+.searchContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin: 15px 0;
+}
+
+.searchInput {
+  width: 250px;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.searchInput:focus {
+  border: 1px solid #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
