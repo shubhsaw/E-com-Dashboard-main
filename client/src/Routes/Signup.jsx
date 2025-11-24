@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import styles from './Signup.module.css'
 import { Link, useNavigate } from 'react-router-dom';
+let api=import.meta.env.VITE_SEVER_API
+
 const Signup = () => {
   const [email, setEmail] = useState("")
   const [firstN, setFirstN] = useState("")
@@ -28,7 +30,7 @@ const Signup = () => {
     console.log(newData)
 
     try {
-      let result = await fetch("http://localhost:5000/signup", {
+      let result = await fetch(api+"/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newData),

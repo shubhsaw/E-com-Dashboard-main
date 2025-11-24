@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import style from './Login.module.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+let api=import.meta.env.VITE_SEVER_API
+
 const Login = () => {
     const navigate=useNavigate();
     const [emai,setEmail]=useState("");
@@ -24,7 +26,7 @@ const Login = () => {
         setLoginData(data)
         // console.log(data);
         try{
-            let result=await fetch("http://localhost:5000/login",{
+            let result=await fetch( api+"/login",{
                 method:"post",
                 headers:{"Content-Type":"application/json"},
                 body:JSON.stringify(data)

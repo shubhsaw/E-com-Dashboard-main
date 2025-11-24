@@ -4,7 +4,9 @@ import { IoArrowBackCircleSharp } from "react-icons/io5";
 import { IoIosArrowBack } from "react-icons/io";
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
+let api=import.meta.env.VITE_SEVER_API
 const AddProduct = () => {
+  
   const navigate = useNavigate()
 
   const [pname, setPname] = useState("");
@@ -30,7 +32,8 @@ const AddProduct = () => {
     //console.log(data);
 
     try {
-      let result = await fetch("http://localhost:5000/AddProduct", {
+    
+      let result = await fetch(api+"/AddProduct", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

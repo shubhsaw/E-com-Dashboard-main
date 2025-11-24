@@ -3,6 +3,8 @@ import style from './Products.module.css'
 import { useNavigate } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import { MdDelete, MdEdit } from "react-icons/md";
+let api=import.meta.env.VITE_SEVER_API
+
 
 const Products = () => {
     const navigate = useNavigate();
@@ -14,7 +16,7 @@ const Products = () => {
     }, []);
 
     async function getProducts() {
-        let result = await fetch("http://localhost:5000/products", {
+        let result = await fetch(api+"/products", {
             headers: {
                 authorization: `bearer ${JSON.parse(localStorage.getItem('token'))}`
             }
@@ -26,7 +28,7 @@ const Products = () => {
     async function deleteProduct(id) {
         let confirmare = confirm("Are you sure you want to delete this product?");
         if (confirmare) {
-            let result = await fetch(`http://localhost:5000/products/${id}`, {
+            let result = await fetch(api+`/products/${id}`, {
                 method: "delete",
                 headers: {
                     authorization: `bearer ${JSON.parse(localStorage.getItem('token'))}`
@@ -46,7 +48,7 @@ const Products = () => {
         setSearch(key);
 
         if (key) {
-            let result = await fetch(`http://localhost:5000/search/${key}`, {
+            let result = await fetch(api+`/search/${key}`, {
                 headers: {
                     authorization: `bearer ${JSON.parse(localStorage.getItem('token'))}`
                 }

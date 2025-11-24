@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./UpdateProduct.module.css";
 import { useNavigate, useParams } from "react-router-dom";
+let api=import.meta.env.VITE_SEVER_API
 
 const UpdateProduct = () => {
   const params=useParams();
@@ -17,7 +18,7 @@ const UpdateProduct = () => {
   }, []);
 
   function fetchProductDetails() {
-    fetch(`http://localhost:5000/product/${params.id}`,{
+    fetch(api+`/product/${params.id}`,{
             headers:{
                 authorization:`bearer ${JSON.parse(localStorage.getItem('token'))}`
             }
@@ -42,7 +43,7 @@ const UpdateProduct = () => {
   };
 
   async function updateproductFunc(){
-    let result = await fetch(`http://localhost:5000/product/${params.id}`, {
+    let result = await fetch(api+`/product/${params.id}`, {
       method: 'put',
       body: JSON.stringify(product),
       headers: {
